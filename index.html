@@ -1,1 +1,535 @@
-<h1>Hello World Wide Web!</h1>
+
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <title>Yasemin Gunal ABOUT ME</title>
+    <meta charset="UTF=8">
+    <link rel="icon" type="image/png" href="thumbnail.png">
+    <!-- Created by Yasemin Gunal 3/19/2026 -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- fonts -->
+    
+    <style>
+    
+      * {box-sizing: border-box;}
+      
+      body { 
+        background-color: #322C4D;
+        text-align: center;
+        margin: 10px 8px 0 8px;
+      }
+        
+      #header {
+        background-color: #65FFDB;
+        height: 80px;
+        width: 100%; 
+        position: sticky;
+        top: 0px;
+        white-space: nowrap; 
+        z-index: 1000; /* adjusts layer order */
+      }
+  
+      #header li {
+        font-family: KoHo;
+        font-size: 40px;
+        color: #282342;
+        list-style: none;
+        display: inline; 
+        margin: 0 50px 0 0px;
+        position: relative;
+        /*border: 1px solid red;*/
+        top: 10px;
+        cursor: pointer;
+      }
+      
+      #header li:hover {
+          color: #CC2F5C;
+      }
+        
+      h2 {
+        font-family: Koho; 
+        color: #CC2F5C;
+        font-size: 65px;
+/*         width: 50%; */
+      }
+      
+        h3 {
+        font-family: Koho; 
+        color: #65FFDB;
+        font-size: 45px;
+/*         width: 50%; */
+      }
+      
+      
+      h1 {
+        font-family: Koho; 
+        color: #65FFDB;
+        font-size: 90px;
+        margin-top: 60px;
+      }
+      
+      p { 
+        font-family: Krub;
+        color: #65FFDB;
+        font-size: 25px;
+      }
+      
+      li {
+        text-align: left;
+        font-family: Krub;
+        color: #65FFDB;
+        font-size: 25px;
+        list-style-type: circle;
+        margin-left: 50px;
+
+  
+      }
+      
+      
+      
+      #OGsGrid {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        column-gap: 30px;
+
+      }
+      
+      .OGsContent {
+        margin: auto auto;
+        width: 430px
+        
+      }
+      
+ 
+      
+      #logoGrid {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        column-gap: 30px;
+
+      }
+      
+      .logoContent {
+        margin: auto auto;
+        width: 350px;
+        
+      }
+      
+       #packageGrid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        column-gap: 30px;
+
+      }
+      
+      .packageContent {
+        margin: 40px auto;
+        
+        width: 200px;
+        
+      }
+      
+      #outerMUGrid {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        justify-content: center;
+
+      }
+      
+      .outerMUContent {
+        margin: auto auto;
+      }
+      
+      .outerMUContent:first-child {
+        width: 100%;
+      }
+      
+      
+       #infoGrid {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        column-gap: 90px;
+
+
+      }
+      
+      .infoContent {
+        margin: 10px auto;
+        width: 500px
+      }
+      
+      
+       #mockUpGrid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+      }
+      
+      .mockUpContent {
+        margin: 10px auto;
+        width: 80%;
+      }
+      
+      
+  
+      
+      /* footer */
+      
+      #attributes a {
+        color: #65FFDB;
+        font-size: 12px;
+      }
+      
+      #attributes {
+          margin-top: 30px;
+      }
+      
+      #footer h2 {
+         margin: 0 auto;
+      }
+      
+      #footer {
+        margin-top: 50px;
+      }
+      
+      #contacts li {
+         list-style: none;
+         display: inline;
+         margin: 0 auto;
+         padding: 0 30px 0 0px;
+      }
+      
+      #contacts a {
+        text-decoration: none;
+      }
+      /* footer */
+      /* dropdown shtuff */ 
+      
+           
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        z-index: 1001; 
+        top: 50px;
+        
+        left: 50%;
+        transform: translateX(-50%);
+
+        padding-bottom: 25px;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+      
+        background-color: #65FFDB;
+        white-space: nowrap; 
+        list-style: none;
+      }
+   
+
+      .dropdown-menu li {
+        margin: 0;
+        padding: 0px 0px 0px 0px;  
+        color: #282342;
+      }
+
+
+      .dropdown-menu a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 35px;
+      }
+
+      .dropdown:hover .dropdown-menu {
+       display: flex;
+      }
+
+      
+    /* dropdown shtuff */
+      
+      #avatar{
+        position: fixed; 
+        bottom: 0px;        
+        right: 0px;           
+        z-index: 1000;
+        cursor: pointer;
+        
+      }
+    
+    </style>
+    
+      
+  </head>
+  <body>
+    
+    
+    <div id="header">
+      <ul>
+        <b>
+        <li id="hometxt">HOME</li>
+        <li id="aboutmetxt" style="color:#CC2F5C;">ABOUT ME</li>
+        <li class="dropdown" id="worktxt">
+          WORK
+        <ul class="dropdown-menu">
+          <li><a href="#">DIGITAL</a></li>
+          <li><a href="#">TRADITIONAL</a></li>
+          <li><a href="#">PAID WORK</a></li>
+          <li><a href="#">PROJECTS</a></li>
+        </ul>
+        </li>
+        <li id="resumetxt">RESUME</li>
+        </b>
+      </ul>
+     </div>
+    
+    <img src="aboutMeAva.png" id="avatar" width="150px" alt="cartoon drawing of 'Yasemin Gunal' commenting on their profile"> <!--I wanted to specify what each image was saying but due to the way i made this, no matter what image shows it will deliver the same alt tag -->
+    
+    
+  
+    
+    <div id="mainContent">
+      
+     
+        <h1 id="yeg" style="cursor:pointer;">
+          HTML PORTFOLIO PROJECT
+        </h1>
+      
+
+       <p>
+       A portfolio was needed, thus one was created!
+       <br><br>
+       I had originally planned on using a website like Wix or Squarespace to create my portfolio. I never liked how restricting and cookie-cutter website builders were, but I had no idea how to make my own website. That was until I took a class on HTML, it was only a single course but it taught me everything I needed to start building that skillset.
+      </p>
+      
+      <h3>
+        YOU ARE LOOKING AT MY FIRST HTML WEBSITE
+      </h3>
+      
+      <p>
+        I found out I didn’t mind working with HTML, in fact I rather enjoyed it. It’s the type of medium that goes through a lot of trial and error, but you get to see your progress first hand while building a website. In all honesty, this wasn't much of a surprise, I also have shown the same interest in coding growing up. Being able to use my knowledge of JavaScript to further enhance my portfolio has turned this website into a much more personalized and interactive experience!
+      </p>
+      
+      
+      
+      <div id="OGsGrid">
+        
+        <img class="OGsContent" src="OGPackage.png" alt="placeholder">
+        
+        <div class="OGsContent">
+          
+          <h3>
+           Package Impression:
+          </h3>
+          
+          <ul>
+            <li>Cluttered</li><br>
+            <li>Not very eye-catching</li><br>
+            <li>Not very appealing for children</li><br>
+            <li>Bags are consistent but lack a clear sense of style</li>
+          </ul>
+          
+          <h3>
+           Logo Impression:
+          </h3>
+          
+          <ul>
+            <li>So much going on!</li><br>
+            <li>Too much text</li><br>
+            <li>Not very recognizable</li><br>
+          </ul>
+          
+        
+          
+        </div>
+        
+      </div>
+      
+      
+      <div class="designsGrid"> 
+        <h2>
+          LOGO PROCESS
+        </h2>
+        <p>
+          Tomato, Potato, and spinach...
+          <br>
+          Iconic flavors? Make it a cute, bright, mascot!
+        </p>
+
+        <img width="60%" src="logoWips.PNG"  alt="placeholder">
+
+        <div id="logoGrid">
+          <img class="logoContent" src="fullLogo.png" alt="placeholder">
+          <img class="logoContent" style="filter:invert(1)" src="BWfullLogo.png" alt="placeholder">
+          <img class="logoContent" src="veggiestrawlogo.png" alt="placeholder">
+          <img class="logoContent" style="filter:invert(1)" src="BWveggiestrawlogo.png" alt="placeholder">
+        </div>
+      </div>
+      
+     <div class="designsGrid"> 
+        <h2>
+          PACKAGE DESIGN PROCESS
+        </h2>
+
+        <p>
+          The original design is cluttered and doesn't stand out. Lets fix that!
+        </p>
+
+
+
+        <div id="packageGrid">
+          <img class="packageContent" src="packageWIP1.png" alt="placeholder">
+          <img class="packageContent" src="packageWIP2.png" alt="placeholder">
+          <img class="packageContent" src="packageWIP4.png" alt="placeholder">
+        </div>
+        <img src="packageRedesign.png" height="70%" alt="placeholder">
+      </div> 
+      
+      <div id="infoGrid">
+        
+        <div class="infoContent">
+        <h2>
+          THE BIG IDEA
+        </h2>
+        <h3 style=" color: #65FFDB;">
+          "SECRETLY HEALTHY"
+        </h3>
+        <p>
+          Garden Veggie Straws are going off of the idea that they are a healthier replacement for your average junk food snack (mainly potato chips.)
+           <br><br>
+          This means the product must scratch that junk food itch, in other words it must still taste like junk food. The idea of "secretly" healthy is that this is a healthy snack that doesn't taste like a healthy snack, hence the secrecy. 
+        </p>
+        </div>
+
+        <div class="infoContent">
+
+        <h2>
+          SLOGAN
+        </h2>
+        <h3>
+          Snack better, live better.
+        </h3>
+          
+        <div id="brandStory">
+          <h2>
+            BRAND STORY
+          </h2>
+          <p>
+            Tricking your kid into eating healthy is a struggle for many parents. Lets can we encourage healthy habits in secret.
+          </p>
+        </div> 
+        
+      </div>
+      </div>
+      
+      <h2>
+        MOCK-UPS
+      </h2>
+      
+      <p>
+        Various mock-ups of potential merchandise and products with the updated designs, created by AI. 
+      </p>
+      
+      <div id="outerMUGrid">
+      
+      <div class="outerMUContent">
+        <img class="mockUpContent" src="productMU.png" alt="placeholder" >
+      </div>
+      
+      <div id="mockUpGrid" class="outerMUContent">
+         <img class="mockUpContent" src="bagMU.png" alt="placeholder">
+         <img class="mockUpContent" src="forkMU.png" alt="placeholder">
+         <img class="mockUpContent" src="keychainMU.png" alt="placeholder">
+         <img class="mockUpContent" src="shirtsMU.png" alt="placeholder">
+         <img class="mockUpContent" src="toothbrushMU.png" alt="placeholder">
+        
+      </div>
+      </div>
+      
+      
+  
+
+
+  
+    </div>
+    
+  
+  
+    
+    <div id="footer">
+      <h2>
+        CONTACT ME!
+      </h2>
+      
+      <ul id="contacts">
+        <li> <a href="mailto:yasemin.e.gunal@gmail.com" target="_blank"> <img src="gmail.png" width="50px" alt="gmail icon"></a></li>
+        <li> <a href="https://wa.me/15195895380" target="_blank"> <img src="mobile.png" width="50px" alt="mobile phone icon"> </a> </li>
+        <li> <a href="https://www.linkedin.com/in/yasemin-gunal-9b0470304/" target="_blank"> <img src="linkedin.png" width="50px" alt="linkedin icon"> </a> </li> 
+      </ul>
+     
+       <div id="attributes">
+       <a href="https://www.flaticon.com/free-icons/telephone" target="_blank" title="telephone icons">Telephone icons created by Ricardo Ruiz - Flaticon</a> 
+       <a href="https://www.flaticon.com/free-icons/linkedin" target="_blank" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
+       <a href="https://www.flaticon.com/free-icons/email" target="_blank" title="email icons">Email icons created by Pixel perfect - Flaticon</a>
+
+      </div> 
+    </div>
+    
+    
+  </body>
+  
+  
+  <script>
+  // get the avatar image
+  const avatarImg = document.getElementById('avatar');
+  let avatarVisible = 1;
+    
+  document.addEventListener("keydown", function(event) {  // hide ava when clicking h
+
+    if (event.key === "h" || event.key === "H") {
+      avatarVisible = 1 - avatarVisible;
+      avatarImg.style.opacity = avatarVisible;
+      
+      if (avatarVisible === 1) {
+        avatarImg.style.pointerEvents = "auto";
+      } else {
+        avatarImg.style.pointerEvents = "none";
+      }
+      }
+  });
+
+  // assign click events
+    
+  document.getElementById('aboutmetxt').addEventListener('click', () => {
+  avatarImg.src = '2clickAboutMe.png';
+  });
+    
+  document.getElementById('yeg').addEventListener('click', (e) => {
+  e.stopPropagation();  
+  avatarImg.src = 'yegava.png';
+  });
+  
+  document.getElementById('avatar').addEventListener('click', (e) => {
+  e.stopPropagation();  
+  avatarImg.src = 'hideAva.png';
+  });
+    
+  document.getElementById('meImg').addEventListener('click', (e) => {
+  e.stopPropagation();  
+  avatarImg.src = 'itsMeAva.png';
+  });
+    
+ 
+ 
+
+</script>
+  
+</html>
