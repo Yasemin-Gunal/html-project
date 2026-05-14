@@ -105,31 +105,16 @@
       .AVAsContent {
         margin: 1fr 1fr;
         height: 150px;
+        cursor: pointer;
       }
       
-/*       #wips1Grid {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        justify-content: center;
-        margin: 10px 200px;
-      } */
-      
+
       .wips1Content {
        margin: 20px 10px;
+       cursor: pointer;
       }
       
       
-/*       #codeGrid {
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: center;
-        column-gap: 20px;
-      }
-      
-      .codeContent {
-        margin: 50px auto;
-        width: 70%;
-      } */
   
       
       /* footer */
@@ -245,7 +230,7 @@
       </ul>
      </div>
     
-    <img src="aboutMeAva.png" id="avatar" width="150px" alt="cartoon drawing of 'Yasemin Gunal' commenting on their profile"> <!--I wanted to specify what each image was saying but due to the way i made this, no matter what image shows it will deliver the same alt tag -->
+    <img src="metaAva.png" id="avatar" width="150px" alt="cartoon drawing of 'Yasemin Gunal' commenting on their profile"> <!--I wanted to specify what each image was saying but due to the way i made this, no matter what image shows it will deliver the same alt tag -->
     
     
   
@@ -253,7 +238,7 @@
     <div id="mainContent">
       
      
-        <h1 id="yeg" style="cursor:pointer;">
+        <h1 id="htmlTxt" style="cursor:pointer;">
           HTML PORTFOLIO PROJECT
         </h1>
       
@@ -295,11 +280,6 @@
   
       
     
-        
-<!--       <img width="800px" src="siteFigmaWip.png" alt="placeholder">
-      <p>
-        I started by creating a <a href="https://www.figma.com/proto/mLqfzfBadghpxHvv7gWMqw/Yasemin-Gunal-Portfolio-Mock-up?node-id=1-2&p=f&t=MijMfaeyxwrJqJbn-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1">mock-up of this website in Figma</a>.
-     </p> -->
       
       <div id="wips1Grid" >
       
@@ -367,13 +347,16 @@
 
   // assign click events
     
-  document.getElementById('aboutmetxt').addEventListener('click', () => {
-  avatarImg.src = '2clickAboutMe.png';
+  document.querySelectorAll('.AVAsContent').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      avatarImg.src = 'creepyAva.png';
+    });
   });
     
-  document.getElementById('yeg').addEventListener('click', (e) => {
+  document.getElementById('htmlTxt').addEventListener('click', (e) => {
   e.stopPropagation();  
-  avatarImg.src = 'yegava.png';
+  avatarImg.src = 'metaAva.png';
   });
   
   document.getElementById('avatar').addEventListener('click', (e) => {
@@ -381,14 +364,14 @@
   avatarImg.src = 'hideAva.png';
   });
     
-  document.getElementById('meImg').addEventListener('click', (e) => {
-  e.stopPropagation();  
-  avatarImg.src = 'itsMeAva.png';
+  document.querySelectorAll('.wips1Content').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      avatarImg.src = 'babyAva.png';
+    });
   });
-    
  
  
-
 </script>
   
 </html>
